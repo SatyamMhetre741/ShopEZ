@@ -1,3 +1,4 @@
+// Assigned to: Saniya
 const mongoose = require('mongoose');
 
 // TODO: Define Order schema

@@ -1,3 +1,4 @@
+// Assigned to: Tanvi
 import React from 'react';
 // TODO: Display single cart item with qty controls and remove button
 // Props: item { product, quantity }

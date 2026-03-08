@@ -1,3 +1,4 @@
+// Assigned to: Satyam
 import React, { createContext, useState, useContext } from 'react';
 
 // TODO: Implement full auth context — login, logout, register, persist token

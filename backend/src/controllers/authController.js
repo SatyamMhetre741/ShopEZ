@@ -1,3 +1,4 @@
+// Assigned to: Satyam
 // TODO: Implement authentication logic (register, login, logout, refresh token)
 
 // const register = async (req, res, next) => { ... };

@@ -1,3 +1,4 @@
+// Assigned to: Tanvi
 const mongoose = require('mongoose');
 
 // TODO: Define Cart schema

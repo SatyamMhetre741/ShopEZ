@@ -1,3 +1,4 @@
+// Assigned to: Rajiv
 const mongoose = require('mongoose');
 
 // TODO: Define Category schema

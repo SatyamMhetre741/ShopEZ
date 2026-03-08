@@ -1,3 +1,4 @@
+// Assigned to: Rajiv
 import React from 'react';
 // TODO: Fetch product by :id from URL param, show image, description, price, reviews, Add to Cart button
 

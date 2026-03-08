@@ -1,3 +1,4 @@
+// Assigned to: Saniya
 import React from 'react';
 // TODO: Build Navbar with links to Home, Products, Cart, Login/Logout based on auth state
 

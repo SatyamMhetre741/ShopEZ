@@ -1,3 +1,4 @@
+// Assigned to: Satyam
 const mongoose = require('mongoose');
 
 // TODO: Define User schema

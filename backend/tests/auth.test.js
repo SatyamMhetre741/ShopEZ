@@ -1,3 +1,4 @@
+// Assigned to: Satyam
 // TODO: Write auth tests (register, login, token validation)
 
 describe('Auth', () => {
