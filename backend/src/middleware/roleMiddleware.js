@@ -1,8 +1,11 @@
 // Assigned to: Satyam
-// TODO: Check req.user.role against allowed roles
+const { sendError } = require('../utils/responseFormatter');
+
 const authorizeRoles = (...roles) => (req, res, next) => {
-  // if (!roles.includes(req.user.role)) return res.status(403).json({ message: 'Forbidden' });
-  next(); // placeholder
+  if (!req.user || !roles.includes(req.user.role)) {
+    return sendError(res, `Access denied — requires role: ${roles.join(' or ')}`, 403);
+  }
+  next();
 };
 
 module.exports = { authorizeRoles };
