@@ -31,8 +31,8 @@ const addToCart = async (req, res) => {
   try {
     const { productId, quantity } = req.body;
     if (!productId || !quantity || quantity < 1) {
-      return sendError(res, 'Product ID and valid quantity required');
-    }
+  return sendError(res, 'Product ID and a valid quantity greater than 0 are required', 400);
+}
 
     const product = await Product.findById(productId);
     if (!product) {
@@ -57,9 +57,11 @@ const addToCart = async (req, res) => {
     await cart.save();
 
     sendSuccess(res, cart, 201);
-  } catch (error) {
-    sendError(res, 'Failed to add item to cart', 500);
-  }
+  } 
+  catch (error) {
+  console.error("Error fetching cart:", error);
+  sendError(res, 'Failed to get cart', 500);
+}
 };
 
 // Update cart item quantity
