@@ -1,9 +1,14 @@
 // Assigned to: Rajiv
 import React from 'react';
-// TODO: Add spinner/skeleton UI
+import './Loader.css';
 
 function Loader() {
-  return <div className="loader">Loading...</div>;
+  return (
+    <div className="loader-container">
+      <div className="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  );
 }
 
 export default Loader;

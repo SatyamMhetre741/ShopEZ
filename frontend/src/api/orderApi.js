@@ -1,22 +1,9 @@
 // Assigned to: Saniya
-import axios from "axios";
+import api from './axiosConfig';
 
-export const createOrder = async (orderData) => {
-  const { data } = await axios.post("/api/orders", orderData);
-  return data;
-};
-
-export const getMyOrders = async () => {
-  const { data } = await axios.get("/api/orders/mine");
-  return data;
-};
-
-export const getOrderById = async (id) => {
-  const { data } = await axios.get(`/api/orders/${id}`);
-  return data;
-};
-
-export const updateOrderStatus = async (id, status) => {
-  const { data } = await axios.put(`/api/orders/${id}`, { status });
-  return data;
-};
+export const createOrder = (orderData) => api.post('/orders', orderData);
+export const getMyOrders = () => api.get('/orders/myorders');
+export const getOrderById = (id) => api.get(`/orders/${id}`);
+export const getAllOrders = () => api.get('/orders');
+export const updateOrderStatus = (id, status) => api.put(`/orders/${id}/status`, { status });
+export const updateOrderToPaid = (id, paymentResult) => api.put(`/orders/${id}/pay`, paymentResult);
