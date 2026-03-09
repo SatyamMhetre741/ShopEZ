@@ -1,11 +1,11 @@
 // Assigned to: Satyam
 const { sendError } = require('../utils/responseFormatter');
 
-const authorizeRoles = (...roles) => (req, res, next) => {
+const restrictTo = (...roles) => (req, res, next) => {
   if (!req.user || !roles.includes(req.user.role)) {
     return sendError(res, `Access denied — requires role: ${roles.join(' or ')}`, 403);
   }
   next();
 };
 
-module.exports = { authorizeRoles };
+module.exports = { restrictTo };

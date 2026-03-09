@@ -1,4 +1,5 @@
 // Assigned to: Satyam
+// User model - handles user authentication and profile data
 const mongoose = require('mongoose');
 const ROLES = require('../constants/roles');
 
@@ -8,6 +9,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Name is required'],
       trim: true,
+      maxlength: [50, 'Name cannot exceed 50 characters'],
     },
     email: {
       type: String,
@@ -16,6 +18,7 @@ const UserSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
       match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email'],
+      index: true,
     },
     password: {
       type: String,
@@ -27,6 +30,11 @@ const UserSchema = new mongoose.Schema(
       type: String,
       enum: Object.values(ROLES),
       default: ROLES.USER,
+    },
+    phone: {
+      type: String,
+      trim: true,
+      default: '',
     },
     avatar: {
       type: String,
