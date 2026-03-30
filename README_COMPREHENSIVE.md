@@ -271,21 +271,6 @@ EMAIL_SERVICE=gmail
 FIREBASE_API_KEY=your_firebase_api_key
 ```
 
-### Frontend Configuration (.env.local)
-
-Create a `.env.local` file in the `frontend` directory:
-
-```env
-VITE_API_BASE_URL=http://localhost:8000/api
-VITE_FIREBASE_API_KEY=AIzaSyC_J5olcCerrPxyntWFcRDDt6zzSMlUU1Y
-VITE_FIREBASE_AUTH_DOMAIN=ecommerce-website-19ecb.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=ecommerce-website-19ecb
-VITE_FIREBASE_STORAGE_BUCKET=ecommerce-website-19ecb.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=179282251767
-VITE_FIREBASE_APP_ID=1:179282251767:web:6a4cf6ea01eac5d24d28f2
-```
-
----
 
 ## 🏃 Running the Project
 
